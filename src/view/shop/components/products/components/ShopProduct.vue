@@ -12,14 +12,14 @@
 import PlusSVG from './PlusSVG.vue';
 
 export default {
-    name: "ShopProduct",
-    props: {
-        content: {
-            type: Object,
-            required: true
-        }
-    },
-    components: { PlusSVG }
+  name: "ShopProduct",
+  props: {
+    content: {
+      type: Object,
+      required: true
+    }
+  },
+  components: { PlusSVG }
 }
 </script>
 <style lang="scss" scoped>
@@ -29,9 +29,6 @@ export default {
   gap: 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid #0000001a;
-  &:nth-last-child(-n + 5) {
-    border: none;
-  }
   .image {
     display: block;
     width: 100%;

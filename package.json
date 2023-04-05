@@ -10,6 +10,7 @@
     "serve": "webpack serve --open --mode development"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "sass-loader": "^13.2.2",
     "vue-loader": "^17.0.1",

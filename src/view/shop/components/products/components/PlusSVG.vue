@@ -1,0 +1,31 @@
+<template>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    stroke="#1F2020"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 4.16663V15.8333"
+      stroke="inherit"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4.16699 10H15.8337"
+      stroke="inherit"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>
+<script lang="js">
+export default {
+  name: 'PlusSVG'
+}
+</script>
+<style lang="scss" scoped></style>

@@ -3,7 +3,7 @@
     <SearchSVG class="item" />
     <ProfileSVG class="item" />
     <HeartSVG class="item" />
-    <button class="basket">{{ count }}</button>
+    <button class="basket" @click="openHandler">{{ count }}</button>
   </div>
 </template>
 <script lang="js">
@@ -19,7 +19,8 @@ export default {
   setup(props) {
     const store = useStore()
     return {
-      count: computed(() => store.getters.getBasketCount)
+      count: computed(() => store.getters.getBasketCount),
+      openHandler: () => store.commit('toggleBasketActive')
     }
   }
 }
@@ -45,6 +46,9 @@ export default {
     color: #1f2020;
     width: 24px;
     height: 24px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>

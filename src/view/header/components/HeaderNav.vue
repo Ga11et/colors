@@ -44,4 +44,11 @@ export default {
     }
   }
 }
+@media (max-width: 1300px) {
+  .nav {
+    .ul {
+      gap: 12px;
+    }
+  }
+}
 </style>

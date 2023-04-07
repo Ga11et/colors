@@ -154,4 +154,18 @@ export default {
     }
   }
 }
+@media (max-width: 1100px) {
+  .product {
+    grid-template-columns: 96px 5fr 1fr 1fr;
+    .info {
+      .name {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .controls {
+      flex-direction: column-reverse;
+    }
+  }
+}
 </style>

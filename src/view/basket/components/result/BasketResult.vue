@@ -66,4 +66,17 @@ export default {
     }
   }
 }
+@media (max-width: 1100px) {
+  .result {
+    .value {
+      .amount {
+        font-size: 24px;
+      }
+    }
+    .accept {
+      width: 170px;
+      height: 48px;
+    }
+  }
+}
 </style>

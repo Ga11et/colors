@@ -1,7 +1,8 @@
 <template>
   <div class="main">
     <div class="head">
-      <p class="count">{{ productsCount }} товаров</p>
+      <p class="count desctop">{{ productsCount }} товаров</p>
+      <MobileFilters />
       <ShopSortOptionsInput />
     </div>
     <transition-group name="products" tag="div" class="products">
@@ -11,18 +12,19 @@
         :key="item.id"
         :basketIds="basketIds"
       />
-      <div class="noBorder"></div>
+      <div class="noBorder" key="border"></div>
     </transition-group>
   </div>
 </template>
 <script lang="js">
 import { computed } from 'vue';
 import { useStore } from 'vuex';
+import MobileFilters from './components/mobileFilters/MobileFilters.vue';
 import ShopProduct from './components/ShopProduct.vue';
 import ShopSortOptionsInput from './components/ShopSortOptionsInput.vue';
 
 export default {
-  components: { ShopProduct, ShopSortOptionsInput },
+  components: { ShopProduct, ShopSortOptionsInput, MobileFilters },
   name: "ShopProducts",
   setup(props) {
     const store = useStore()
@@ -76,6 +78,33 @@ export default {
       width: 100%;
       height: 1px;
       background-color: white;
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .main {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+@media (max-width: 1300px) {
+  .main {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .main {
+    .head {
+      padding-bottom: 24px;
+      .count.desctop {
+        display: none;
+      }
+    }
+    .products {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

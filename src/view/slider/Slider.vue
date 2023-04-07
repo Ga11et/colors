@@ -1,6 +1,7 @@
 <template>
   <div class="swiper">
     <SliderPath class="path" :content="['Главная', 'Продукты', 'Краски']" />
+    <h1 class="Mobileheading">Краски</h1>
     <swiper
       class="main"
       :modules="modules"
@@ -60,8 +61,31 @@ export default {
     left: 64px;
     z-index: 5;
   }
+  .Mobileheading {
+    display: none;
+  }
   .main {
     height: 100%;
+  }
+}
+@media (max-width: 1100px) {
+  .swiper {
+    height: auto;
+    .path {
+      top: 16px;
+      left: 20px;
+    }
+    .Mobileheading {
+      display: block;
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      padding: 70px 20px 0;
+    }
+    .main {
+      display: none;
+    }
   }
 }
 </style>

@@ -9,6 +9,7 @@ export const shopSlice = {
       { id: "4", value: false, text: "Эксклюзивные", key: "isExclusive" },
       { id: "5", value: false, text: "Распродажа", key: "isSale" },
     ],
+    isMobileFiltersActive: false,
     sort: { id: "1", ru: "Сначала дорогие", en: "expencive" },
     sortOptions: [
       { id: "1", ru: "Сначала дорогие", en: "expencive" },
@@ -55,6 +56,9 @@ export const shopSlice = {
     getSortOption(store) {
       return store.sort;
     },
+    getMobileFiltersActive(store) {
+      return store.isMobileFiltersActive;
+    },
   },
   mutations: {
     toggleFilter(store, payload) {
@@ -64,6 +68,9 @@ export const shopSlice = {
     },
     setSortOption(store, payload) {
       store.sort = payload;
+    },
+    toggleMobileFilters(store) {
+      store.isMobileFiltersActive = !store.isMobileFiltersActive;
     },
   },
   actions: {},

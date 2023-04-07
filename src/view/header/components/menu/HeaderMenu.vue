@@ -1,8 +1,8 @@
 <template>
   <div class="menu">
-    <SearchSVG class="item" />
-    <ProfileSVG class="item" />
-    <HeartSVG class="item" />
+    <SearchSVG class="item desctop" />
+    <ProfileSVG class="item desctop" />
+    <HeartSVG class="item desctop" />
     <button class="basket" @click="openHandler">{{ count }}</button>
   </div>
 </template>
@@ -48,6 +48,13 @@ export default {
     height: 24px;
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .menu {
+    .desctop {
+      display: none;
     }
   }
 }

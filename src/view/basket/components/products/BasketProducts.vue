@@ -27,6 +27,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .products {
+  max-height: 80%;
+  overflow: auto;
   .head {
     display: flex;
     align-items: center;

@@ -43,4 +43,12 @@ export default {
     }
   }
 }
+@media (max-width: 1100px) {
+  .path {
+    color: #1f2020;
+    .dot {
+      background-color: #1f2020;
+    }
+  }
+}
 </style>

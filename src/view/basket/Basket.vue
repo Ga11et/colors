@@ -39,4 +39,10 @@ export default {
   grid-template-rows: 48px 1fr 56px;
   gap: 80px;
 }
+@media (max-width: 1100px) {
+  .basket {
+    min-width: unset;
+    width: 100%;
+  }
+}
 </style>

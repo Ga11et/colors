@@ -73,6 +73,9 @@ export default {
       color: #1f2020;
     }
     .buy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: #7bb899;
       border-radius: 8px;
       padding: 6px 30px;
@@ -90,6 +93,16 @@ export default {
   &:hover {
     .buy {
       display: inline-block;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .product {
+    grid-template-rows: 156px 1fr 32px;
+    .bottom {
+      .buy {
+        padding: 4px 12px;
+      }
     }
   }
 }

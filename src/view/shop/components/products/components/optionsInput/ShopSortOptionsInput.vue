@@ -19,7 +19,7 @@
 <script lang="js">
 import { computed, ref } from 'vue';
 import { useStore } from 'vuex';
-import ArrowSVG from './ArrowSVG.vue';
+import ArrowSVG from './components/ArrowSVG.vue';
 
 export default {
   components: { ArrowSVG },

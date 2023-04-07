@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <img class="image" :src="content.image" :alt="content.name" />
-    <h3 class="name">{{ content.name }}</h3>
+    <h3 class="name">{{ productName }}</h3>
     <div class="bottom">
       <p class="price">{{ content.price }} ₽</p>
       <button
@@ -15,9 +15,10 @@
   </div>
 </template>
 <script lang="js">
-import { toRefs } from 'vue';
+import { computed, toRefs } from 'vue';
 import { useStore } from 'vuex';
-import PlusSVG from './PlusSVG.vue';
+import { textServises } from '../../../../../../servises/textServises';
+import PlusSVG from './components/PlusSVG.vue';
 
 export default {
   name: "ShopProduct",
@@ -36,7 +37,8 @@ export default {
     const store = useStore()
     const {content} = toRefs(props)
     return {
-      addToBaksetHandler: () => store.commit('addBasketProduct', content.value)
+      addToBaksetHandler: () => store.commit('addBasketProduct', content.value),
+      productName: computed(() => textServises.fixedLength(content.value.name))
     }
   }
 }

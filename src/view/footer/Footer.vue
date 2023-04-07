@@ -12,4 +12,9 @@ export default {
   height: 160px;
   background-color: black;
 }
+@media (max-width: 1100px) {
+  .footer {
+    height: 80px;
+  }
+}
 </style>

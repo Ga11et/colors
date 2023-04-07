@@ -85,7 +85,7 @@ export const products = [
   {
     id: "7",
     image: product7,
-    name: "Краска Wallquest, Brownsone MS90102",
+    name: "Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102",
     price: 4800,
     isNew: false,
     isHave: true,

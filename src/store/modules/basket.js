@@ -34,7 +34,7 @@ export const basketSlice = {
       {
         id: "3",
         image: product3,
-        name: "Краска Wallquest, Brownsone MS90102",
+        name: "Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102Краска Wallquest, Brownsone MS90102",
         price: 5290,
         isNew: false,
         isHave: true,

@@ -20,8 +20,8 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 import MobileFilters from './components/mobileFilters/MobileFilters.vue';
-import ShopProduct from './components/ShopProduct.vue';
-import ShopSortOptionsInput from './components/ShopSortOptionsInput.vue';
+import ShopProduct from './components/product/ShopProduct.vue';
+import ShopSortOptionsInput from './components/optionsInput/ShopSortOptionsInput.vue';
 
 export default {
   components: { ShopProduct, ShopSortOptionsInput, MobileFilters },

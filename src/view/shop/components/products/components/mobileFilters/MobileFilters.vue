@@ -48,6 +48,7 @@ export default {
 }
 // styles
 .open {
+  display: none;
   background-color: transparent;
   border: none;
   font-family: inherit;
@@ -109,6 +110,11 @@ export default {
     flex-direction: column;
     gap: 12px;
     padding: 28px 24px;
+  }
+}
+@media (max-width: 1100px) {
+  .open {
+    display: block;
   }
 }
 </style>

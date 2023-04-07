@@ -4,11 +4,19 @@
     <h3 class="name">{{ content.name }}</h3>
     <div class="bottom">
       <p class="price">{{ content.price }} ₽</p>
-      <button class="buy"><PlusSVG /></button>
+      <button
+        class="buy"
+        :disabled="basketIds.includes(content.id)"
+        @click="addToBaksetHandler"
+      >
+        <PlusSVG />
+      </button>
     </div>
   </div>
 </template>
 <script lang="js">
+import { toRefs } from 'vue';
+import { useStore } from 'vuex';
 import PlusSVG from './PlusSVG.vue';
 
 export default {
@@ -17,9 +25,20 @@ export default {
     content: {
       type: Object,
       required: true
+    },
+    basketIds: {
+      type: Array,
+      required: true
     }
   },
-  components: { PlusSVG }
+  components: { PlusSVG },
+  setup(props) {
+    const store = useStore()
+    const {content} = toRefs(props)
+    return {
+      addToBaksetHandler: () => store.commit('addBasketProduct', content.value)
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -61,6 +80,10 @@ export default {
       display: none;
       &:hover {
         cursor: pointer;
+      }
+      &:disabled {
+        cursor: auto;
+        opacity: 0.3;
       }
     }
   }

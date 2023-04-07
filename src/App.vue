@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <Basket v-if="!isBasketShow" />
+  <Basket v-if="isBasketShow" />
   <main>
     <Slider />
     <Shop />

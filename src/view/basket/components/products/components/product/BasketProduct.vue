@@ -47,7 +47,7 @@ export default {
     content: {
       type: Object,
       required: true
-    }
+    },
   },
   setup(props) {
     const {content} = toRefs(props)

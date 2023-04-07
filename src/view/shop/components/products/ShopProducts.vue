@@ -5,7 +5,12 @@
       <ShopSortOptionsInput />
     </div>
     <transition-group name="products" tag="div" class="products">
-      <ShopProduct v-for="item in products" :content="item" :key="item.id" />
+      <ShopProduct
+        v-for="item in products"
+        :content="item"
+        :key="item.id"
+        :basketIds="basketIds"
+      />
       <div class="noBorder"></div>
     </transition-group>
   </div>
@@ -24,6 +29,7 @@ export default {
     return {
       products: computed(() => store.getters.getProducts),
       productsCount: computed(() => store.getters.getProductsCount),
+      basketIds: computed(() => store.getters.getBasketIds)
     }
   }
 }

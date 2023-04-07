@@ -63,6 +63,9 @@ export const basketSlice = {
         0
       );
     },
+    getBasketIds(store) {
+      return store.products.map((el) => el.id);
+    },
   },
   mutations: {
     setBasketCount(store, payload) {
@@ -95,6 +98,10 @@ export const basketSlice = {
     deleteBasketProduct(store, payload) {
       const product = store.products.find((el) => el.id === payload.id);
       if (product) product.count = 0;
+    },
+    addBasketProduct(store, payload) {
+      const product = store.products.find((el) => el.id === payload.id);
+      if (!product) store.products.push({ ...payload, count: 1 });
     },
   },
   actions: {},

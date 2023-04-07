@@ -103,6 +103,7 @@ export default {
     grid-template-rows: 156px 1fr 32px;
     .bottom {
       .buy {
+        display: block;
         padding: 4px 12px;
       }
     }

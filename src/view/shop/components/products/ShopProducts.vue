@@ -5,7 +5,7 @@
       <MobileFilters />
       <ShopSortOptionsInput />
     </div>
-    <transition-group name="products" tag="div" class="products">
+    <div class="products">
       <ShopProduct
         v-for="item in products"
         :content="item"
@@ -13,7 +13,7 @@
         :basketIds="basketIds"
       />
       <div class="noBorder" key="border"></div>
-    </transition-group>
+    </div>
   </div>
 </template>
 <script lang="js">
@@ -37,20 +37,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// animation
-.products-move,
-.products-enter-active,
-.products-leave-active {
-  transition: all 0.5s ease;
-}
-.products-enter-from,
-.products-leave-to {
-  opacity: 0;
-}
-.products-leave-active {
-  position: absolute;
-}
-// styles
 .main {
   min-height: 1000px;
   .head {

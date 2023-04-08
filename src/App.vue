@@ -1,11 +1,13 @@
 <template>
-  <Header />
-  <Basket v-if="isBasketShow" />
-  <main>
-    <Slider />
-    <Shop />
-  </main>
-  <Footer />
+  <div :class="{ disabledScroll: isBasketShow }">
+    <Header />
+    <Basket v-if="isBasketShow" />
+    <main>
+      <Slider />
+      <Shop />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script>
 import { computed } from "vue";
@@ -27,4 +29,9 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.disabledScroll {
+  height: 100.1vh;
+  overflow: hidden;
+}
+</style>

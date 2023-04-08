@@ -41,8 +41,10 @@ export default {
 }
 @media (max-width: 1100px) {
   .basket {
+    padding: 20px;
     min-width: unset;
     width: 100%;
+    gap: 20px;
   }
 }
 </style>
